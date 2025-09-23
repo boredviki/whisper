@@ -1,0 +1,35 @@
+name: Build Windows EXE (whisper_transcriber)
+
+on:
+  workflow_dispatch:  # allows manual run from GitHub Actions
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"   # adjust if needed
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Build whisper_transcriber.exe
+        run: |
+          pyinstaller --onefile --windowed whisper_transcriber.py
+          # Optional: add icon if you have one
+          # pyinstaller --onefile --windowed --icon=app.ico whisper_transcriber.py
+
+      - name: Upload EXE artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: whisper_transcriber-exe
+          path: dist/*.exe
