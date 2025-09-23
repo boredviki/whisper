@@ -1,0 +1,74 @@
+# Whisper Audio Transcription Requirements
+# =====================================
+# Updated: September 23, 2025
+# Python 3.11+ compatible (tested with 3.13.5)
+
+# Core AI/ML dependencies
+openai-whisper==20250625
+torch==2.8.0
+torchaudio==2.8.0
+
+# Audio processing and recording
+PyAudio==0.2.14
+
+# Scientific computing
+numpy==2.3.3
+numba==0.62.0
+
+# Text processing
+regex==2025.9.18
+tiktoken==0.11.0
+
+# HTTP requests and utilities
+requests==2.32.5
+urllib3==2.5.0
+certifi==2025.8.3
+charset-normalizer==3.4.3
+idna==3.10
+
+# File system and utilities
+fsspec==2025.9.0
+filelock==3.19.1
+packaging==25.0
+tqdm==4.67.1
+
+# Mathematical libraries  
+sympy==1.14.0
+mpmath==1.3.0
+networkx==3.5
+more-itertools==10.8.0
+
+# Template engine
+Jinja2==3.1.6
+MarkupSafe==3.0.2
+
+# Type annotations
+typing_extensions==4.15.0
+
+# Development and packaging tools
+pyinstaller==6.16.0
+pyinstaller-hooks-contrib==2025.8
+py2app==0.28.8
+altgraph==0.17.4
+macholib==1.16.3
+modulegraph==0.19.6
+
+# GUI dependencies
+# tkinter is included with Python standard library
+
+# Standard library modules used (no additional packages needed):
+# - os, sys, argparse, json, ssl, time, threading, subprocess
+# - pathlib, wave, io, contextlib, datetime, queue
+# - typing (covered by typing_extensions)
+
+# Optional: Additional audio format support (uncomment if needed)
+# pydub>=0.25.0  # For additional audio format support
+# librosa>=0.10.0  # For advanced audio analysis
+# soundfile>=0.12.0  # For audio file I/O
+# ffmpeg-python>=0.2.0  # For ffmpeg integration
+
+# Development tools (optional, uncomment for development)
+# pytest>=7.0.0  # For testing
+# black>=23.0.0  # For code formatting
+# flake8>=6.0.0  # For linting
+# mypy>=1.0.0  # For type checking
